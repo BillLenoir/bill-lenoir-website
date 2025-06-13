@@ -85,7 +85,7 @@ article h4 {
 }
 
 article img {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 article ol.list-with-emphasis li::marker {
