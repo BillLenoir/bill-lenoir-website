@@ -99,6 +99,12 @@ article blockquote {
     font-size:1.25em;
 }
 
+blockquote footer {
+  margin: 0.25em 0 0;
+  border: none;
+  padding:0;
+}
+
 article blockquote p {
     margin: 0;
 }
