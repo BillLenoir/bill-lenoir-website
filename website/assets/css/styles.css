@@ -1,9 +1,7 @@
 /* Base Reset */
 html {
-    font-size: 100%;
     box-sizing: border-box;
-    background-color: #f4f1ee;
-    color: #2c2c2c;
+    background-color: #ddd;
   }
   
   *, *:before, *:after {
@@ -13,11 +11,10 @@ html {
   body {
     margin: 0;
     font-family: 'Georgia', serif;
+    font-size: 100%;
     line-height: 1.6;
-    background-image: radial-gradient(circle at 50% 0, #fff 0%, #f4f1ee 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #2c2c2c;
+    background-color: #ddd;
+    color: #000;    
   }
   
   .outer-container {
@@ -37,21 +34,26 @@ html {
     border-radius: 10px;
     padding: 2em;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
   }
-  
-  header:hover, article:hover, footer:hover {
-    transform: scale(1.01);
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
   }
   
   /* Header */
-  header p.tagline {
+  header h1, header p.tagline {
     font-family: 'Courier New', monospace;
     font-size: 1.4em;
     text-align: center;
     font-weight: bold;
     color: #6a1b1f;
     margin: 0;
+  }
+
+  header img.hero-shot {
+    width: 75px;
   }
   
   /* Article */
@@ -65,7 +67,7 @@ html {
     font-size: 1.6em;
     margin-top: 2em;
     color: #144e6c;
-    border-left: 6px solid #999;
+    border-left: 8px solid #999;
     padding-left: 0.5em;
   }
   
@@ -82,16 +84,15 @@ html {
     margin: 2em;
     padding: 0 1em;
     background-color: #e9ecef;
-    border-left: 1px dashed #999;
+    border-left: 2px dotted #999;
     font-style: italic;
   }
   
   blockquote {
     margin: 2em;
-    padding: 1em;
-    border-left: 3px solid #6a1b1f;
+    padding: 0 1em;
+    border-left: 4px solid #6a1b1f;
     background-color: #fcf0f2;
-    font-size: 1.2em;
     font-style: italic;
     color: #4e2326;
   }
@@ -104,14 +105,14 @@ html {
     margin-bottom: 0.5em;
   }
   
-  a {
+  article a {
     color: #0077cc;
     text-decoration: none;
     border-bottom: 1px dotted #0077cc;
     transition: color 0.2s ease, border-bottom 0.2s ease;
   }
   
-  a:hover {
+  article a:hover {
     color: #005799;
     border-bottom: 1px solid #005799;
   }
@@ -126,7 +127,6 @@ html {
   /* Responsive */
   @media (max-width: 600px) {
     body {
-      font-size: 16px;
       padding: 0.5em;
     }
   
